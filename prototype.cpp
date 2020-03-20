@@ -41,6 +41,8 @@ static void help()
 
 int main(int argc, const char* argv[])
 {
+    // Necessary if display via WSL
+    setenv("DISPLAY", "127.0.0.1:0", true);
     // If no input picture then use 513_Serapi.png
     const string filename = argc >= 2 ? argv[1] : "513_Serapi.png";
 
